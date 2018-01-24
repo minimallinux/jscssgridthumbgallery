@@ -1,18 +1,18 @@
 /*jslint browser:true */
 //const [current, imgs] = [document.querySelector('#current'), document.querySelectorAll('.imgs img')];
 const current = document.querySelector("#current");
-const imgs = document.querySelectorAll(".imgs img");
+const thumbs = document.querySelectorAll(".thumbs img");
 const opacity = 0.6;
 
 // Set first img opacity
-imgs[0].style.opacity = opacity;
+thumbs[0].style.opacity = opacity;
 
 //Set event listener for a click on images to run the imgClick function
-imgs.forEach(img => img.addEventListener("click", imgClick));
+thumbs.forEach(img => img.addEventListener("click", imgClick));
 
 function imgClick(e) {
   // Reset the opacity
-  imgs.forEach(img => (img.style.opacity = 1));
+  thumbs.forEach(img => (img.style.opacity = 1));
 
   // Change current image to src of clicked image
   current.src = e.target.src;
